@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Expense Tracker</h2>
+    <div class="contrainer">
+        <h4>Your Balance</h4>
+        <h1 id="balance">₹0.00</h1>
+        <div class="inc-exp-container">
+            <div>
+                <h4>Income</h4>
+                <p id="money-plus" class="money-plus">
+                    +₹0.00
+                </p>
+            </div>
+
+            <div>
+                <h4>Expense</h4>
+                <p id="money-minus" class="money-minus">
+                    -₹0.00
+                </p>
+            </div>
+        </div>
+        <h3>History</h3>
+        <ul id="list" class="list">
+            <li class="minus">
+                Cash <span>-₹400</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 delete-btn">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m6 4.125 2.25 2.25m0 0 2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                </svg>
+
+                <!-- <button class="delete-btn"></button> -->
+            </li>
+        </ul>
+        <h3>Add New Transition</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="Text">Text</label>
+                <input type="text" id="text" placeholder="Enter Text...">
+            </div>
+            <div class="form-control">
+                <label for="Amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter Amount...">
+            </div>
+            <div class="form-control">
+                <label for="date">Date</label>
+                <input type="date" id="date">
+            </div>
+            <button type="submit" class="btn">Add Tranction</button>
+            <select class="months" id="months">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+
+            </select>
+            <button type="button" id="view-btn">View Transactions</button>
+
+            <h3>Transaction(s)</h3>
+            <ul id="view-transaction" class="list">
+                <table id="transaction-table">
+                   
+                    <tbody id="view-transaction">
+            
+                    </tbody>
+                </table>
+            </ul>
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
